@@ -15,6 +15,15 @@ AppDataSource.initialize().then(async () => {
     app.use(cors());
 
     // Routes go here
+    app.get("/hardcoded-todo", (req, res) => {
+        const hardcodedTodo = {
+            "completed": false,
+            "id": 1000,
+            "taskName": "COMP 251 Assignment",
+        }
+        
+        res.json(hardcodedTodo)
+    })
     
     // Starts server and listens on port 3001 for connections
     app.listen(3001);
