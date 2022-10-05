@@ -14,16 +14,7 @@ AppDataSource.initialize().then(async () => {
     app.use(bodyParser.json());
     app.use(cors());
 
-    // Creating route
-    app.get("/hardcoded-entity", (req, res) => {
-        const hardcodedEntity = {
-            "id": 1000,
-            "stringColumn": "",
-            "boolColumn": false,
-        }
-    
-        res.json(hardcodedEntity)
-    })
+    // Routes go here
     
     // Starts server and listens on port 3001 for connections
     app.listen(3001);
